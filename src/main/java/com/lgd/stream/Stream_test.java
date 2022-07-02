@@ -40,10 +40,10 @@ public class Stream_test {
 
         Map<String, List<Student>> collect = students.stream().collect(Collectors.groupingBy(i -> i.getName()));
 
-/*        for(String groupName:collect.keySet()){
+        for(String groupName:collect.keySet()){
             System.out.println(groupName );
             collect.get(groupName).forEach(student -> System.out.println(student));
-        }*/
+        }
         //group by 分组
 /*        Map<String,Map<String, List<Student>>> collect2 = students.stream().collect(Collectors.groupingBy(i -> i.getName()
                 ,Collectors.groupingBy(i -> i.getCount() > 1 ? "首考" : "重修" )
@@ -138,10 +138,10 @@ public class Stream_test {
         System.out.println(average.getAsDouble());*/
 
         //List<Employee> list
-        Map<Integer, Long> collect3 = students.stream().collect(Collectors.groupingBy(i -> i.getScore(),Collectors.counting()));
+/*        Map<Integer, Long> collect3 = students.stream().collect(Collectors.groupingBy(i -> i.getScore(),Collectors.counting()));
         for(Integer integer: collect3.keySet()){
             System.out.println(integer + " " + collect3.get(integer));
-        }
+        }*/
 /*        //List<Map<String,Object>> egyList
         long count = egyList.stream()
                 .filter((Map m)->StringUtils.isNotEmpty(m.get(cols)+""))
